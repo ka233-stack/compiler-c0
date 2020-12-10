@@ -1,0 +1,19 @@
+static: 70 75 74 69 6E 74 (`putint`)
+
+static: 6D 61 69 6E (`main`)
+
+static: 5F 73 74 61 72 74 (`_start`)
+
+
+fn [2] 0 0 -> 0 {
+    0: StackAlloc(0)
+    1: Call(1)
+}
+
+fn [1] 1 0 -> 0 {
+    0: StackAlloc(0)
+    1: Push(123456)
+    2: NegI
+    3: CallName(0)
+    4: Ret
+}
