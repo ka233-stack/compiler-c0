@@ -1,5 +1,5 @@
 FROM openjdk:13
+COPY ./* /app/
 WORKDIR /app
-COPY build.gradle gradle settings.gradle compiler-c0.iml /app/
-COPY src /app/src
-RUN gradle fatjar --no-daemon
+RUN javac -d ./output ./main/java/c0/App.java
+WORKDIR /app/output
